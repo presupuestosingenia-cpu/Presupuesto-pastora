@@ -42,7 +42,9 @@ window.__cfgP.catch(function(){});}catch(e){}})();</script>
 @media (min-width: 52rem){ .plan-grid{ grid-template-columns: repeat(var(--cols, 3), 1fr); } }
 .sol-grid.uno{ grid-template-columns: 1fr; max-width: 46rem; }
 .plan-grid.uno{ max-width: 30rem; margin-left: auto; margin-right: auto; }
-.chip-et{ display: inline-block; align-self: flex-start; width: fit-content; margin: .35rem 0 .5rem; padding: .28rem .7rem; border-radius: 999px; font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--blue); box-shadow: inset 0 0 0 1px currentColor; }
+.sol-head{ display: flex; align-items: center; flex-wrap: wrap; gap: .5rem .8rem; min-height: 2.6rem; margin-bottom: .5rem; }
+.sol-head .sol-num{ margin: 0; }
+.chip-et{ display: inline-block; width: fit-content; margin: 0; padding: .28rem .7rem; border-radius: 999px; font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--blue); box-shadow: inset 0 0 0 1px currentColor; }
 [hidden]{ display: none !important; }
 #estado{ margin: 2rem 0 0; text-align: center; color: var(--ink-dim); font-weight: 500; }
 #estado a{ margin-top: 1rem; }
@@ -285,8 +287,10 @@ window.__cfgP.catch(function(){});}catch(e){}})();</script>
 
   function tarjeta(s, i){
     var a = h('article', 'sol glass tilt-3d reveal');
-    a.appendChild(h('span', 'sol-num', ('0' + (i + 1)).slice(-2)));
-    if (s.etiqueta) a.appendChild(h('span', 'chip-et', s.etiqueta));
+    var hd = h('div', 'sol-head');
+    hd.appendChild(h('span', 'sol-num', ('0' + (i + 1)).slice(-2)));
+    if (s.etiqueta) hd.appendChild(h('span', 'chip-et', s.etiqueta));
+    a.appendChild(hd);
     a.appendChild(h('h3', null, s.nombre));
     a.appendChild(h('p', null, s.resumen));
     if (s.items && s.items.length) {
@@ -377,7 +381,8 @@ window.__cfgP.catch(function(){});}catch(e){}})();</script>
     orden.forEach(function(id){ pg.appendChild(plan(PLANES[id], id)); });
     pg.style.setProperty('--cols', Math.min(orden.length, 3));
     pg.classList.toggle('uno', orden.length === 1);
-    $('inv-sub').textContent = cfg.invSub ? cfg.invSub : PLANES.eco
+    pg.hidden = orden.length === 1;            /* una sola opción: no hay nada para elegir, queda solo el resumen */
+    $('inv-sub').textContent = cfg.invSub ? cfg.invSub : orden.length === 1 ? 'Esto es lo que incluye tu propuesta.' : PLANES.eco
       ? 'Tocá una opción para ver cuánto sería. La más completa es el Ecosistema, con todo junto.'
       : 'Tocá una opción para ver cuánto sería.';
     $('inversion').hidden = false;
