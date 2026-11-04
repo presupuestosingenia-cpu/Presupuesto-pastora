@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<script>/* aplica el tema guardado ANTES de pintar, para que no parpadee */
+try{var t=localStorage.getItem('ingenia-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://script.google.com">
+<link rel="preconnect" href="https://script.googleusercontent.com" crossorigin>
+<script>/* pide el presupuesto YA, en paralelo con el resto de la página */
+(function(){try{var E='https://script.google.com/macros/s/AKfycbwDVP0rIlyzmd8LmrDXeFLXrOLtSvqQbqqSwm7gOoIBqhIhlChOGV5ZlHGlG-RP2BoC/exec',F='1tLrDTWIycHePoemlJ4w1LpLHp6GFXD6_';
+window.__cfgP=fetch(E+(E.indexOf('?')<0?'?':'&')+'id='+encodeURIComponent(F),{cache:'no-store'}).then(function(r){if(!r.ok)throw new Error('http');return r.json()});
+window.__cfgP.catch(function(){});}catch(e){}})();</script>
+<title>Presupuesto de iNGENIA para Pastora</title>
+<meta name="description" content="Presupuesto de iNGENIA para Pastora. Mirá las soluciones y la inversión.">
+<meta property="og:title" content="Presupuesto de iNGENIA para Pastora">
+<meta property="og:description" content="Mirá las soluciones y la inversión.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="iNGENIA">
+<meta property="og:locale" content="es_AR">
+<meta property="og:url" content="https://ingenia-pastora.netlify.app/">
+<meta property="og:image" content="https://ingenia-pastora.netlify.app/og-ingenia-v2.jpg">
+<meta property="og:image:secure_url" content="https://ingenia-pastora.netlify.app/og-ingenia-v2.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+<meta property="og:image:alt" content="Tu sistema iNGENIA llegó: ordená tu negocio y escalá tus ventas">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Presupuesto de iNGENIA para Pastora">
+<meta name="twitter:image" content="https://ingenia-pastora.netlify.app/og-ingenia-v2.jpg">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#2563EB">
+<link rel="icon" type="image/png" href="icon-32.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="presupuesto.css">
+<style>
+@media (min-width: 52rem){ .plan-grid{ grid-template-columns: repeat(var(--cols, 3), 1fr); } }
+.sol-grid.uno{ grid-template-columns: 1fr; max-width: 46rem; }
+.plan-grid.uno{ max-width: 30rem; margin-left: auto; margin-right: auto; }
+.chip-et{ display: inline-block; align-self: flex-start; width: fit-content; margin: .35rem 0 .5rem; padding: .28rem .7rem; border-radius: 999px; font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--blue); box-shadow: inset 0 0 0 1px currentColor; }
+[hidden]{ display: none !important; }
+#estado{ margin: 2rem 0 0; text-align: center; color: var(--ink-dim); font-weight: 500; }
+#estado a{ margin-top: 1rem; }
+</style>
+</head>
+<body>
+
+<div class="atmo" aria-hidden="true">
+  <div class="atmo-blob atmo-b1"></div>
+  <div class="atmo-blob atmo-b2"></div>
+  <div class="atmo-blob atmo-b3"></div>
+  <div class="atmo-blob atmo-b4"></div>
+  <div class="atmo-blob atmo-b5"></div>
+</div>
+
+<header class="site glass">
+  <div class="shell site-nav">
+    <a class="brand" href="#inicio">
+      <img src="logo-header.png" alt="">
+      <span class="wordmark"><span class="wm-light">iNGEN</span><span class="wm-bold">IA</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#soluciones">Soluciones</a>
+      <a href="#inversion">Inversión</a>
+      <a href="#por-que">Por qué iNGENIA</a>
+    </nav>
+    <div class="nav-right">
+      <a class="ig-link" href="https://www.instagram.com/ingenia.sf" target="_blank" rel="noopener" aria-label="Instagram de INGENIA">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+      </a>
+      <button type="button" class="theme-toggle" data-theme-toggle aria-label="Cambiar a modo nocturno">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg>
+      </button>
+      <a class="btn" data-wa="fede" href="https://wa.me/5493425969853">WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="shell hero-grid">
+    <div class="hero-text">
+      <span class="eyebrow hero-anim"><span class="dot"></span><span id="fecha">Santa Fe, Argentina</span></span>
+      <p class="hero-question small hero-anim hd0">Presupuesto de <span class="wm-light">iNGEN</span><span class="wm-bold">IA</span></p>
+      <h1 class="hero-anim hd1"><span class="gradient-text name-accent">para <span id="cliente">Pastora</span>.</span></h1>
+      <p class="hero-tag hero-anim hd2">Ordená tu negocio. Escalá tus ventas.</p>
+      <p class="lede hero-anim hd2">Soluciones digitales para vender online y centralizar la gestión de tu empresa desde un mismo lugar.</p>
+      <div class="cta-row hero-anim hd3">
+        <a class="btn btn-lg" href="#inversion">Ver la inversión</a>
+        <a class="btn btn-outline btn-lg" href="#soluciones">Ver qué incluye ↓</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="logo-glow" aria-hidden="true"></div>
+      <div class="hero-gallery">
+        <div class="g-cell g-large tilt-3d slide-in-left">
+          <video class="g-media" autoplay muted loop playsinline preload="metadata" poster="producto-video-1-poster.jpg">
+            <source src="producto-video-1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="g-cell g-top tilt-3d slide-in-right">
+          <img class="g-media" src="producto-foto-1.jpg" alt="Panel de gestión de INGENIA" loading="lazy" decoding="async">
+        </div>
+        <div class="g-cell g-bottom tilt-3d slide-in-right gd2">
+          <video class="g-media" autoplay muted loop playsinline preload="metadata" poster="producto-video-2-poster.jpg">
+            <source src="producto-video-2.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="soluciones">
+  <div class="shell">
+    <div class="section-head reveal">
+      <h2 id="sol-titulo">Tus soluciones.</h2>
+      <p id="sol-sub">Cada una funciona por sí sola. Juntas, se conectan entre sí y vos manejás todo desde un único lugar.</p>
+    </div>
+    <p id="estado" role="status">Cargando tu presupuesto…</p>
+    <div class="sol-grid" id="sol-grid" hidden></div>
+  </div>
+</section>
+
+<section class="section section-tint" id="inversion" hidden>
+  <div class="shell">
+    <div class="section-head reveal">
+      <h2>Tu inversión.</h2>
+      <p id="inv-sub">Tocá una opción para ver cuánto sería.</p>
+    </div>
+
+    <div class="plan-grid" id="plan-grid" role="group" aria-label="Elegí una opción"></div>
+
+    <div class="total glass reveal" aria-live="polite">
+      <span class="total-label">Tu opción</span>
+      <p class="total-name" id="t-name"></p>
+      <div class="total-cols">
+        <div class="total-col"><small>Implementación</small><span class="big" id="t-impl">$0</span></div>
+        <div class="total-col"><small>Suscripción mensual</small><span class="big"><span id="t-mes">$0</span><span class="per"> /mes</span></span></div>
+      </div>
+      <p class="total-incl" id="t-incl"></p>
+      <p class="saving" id="t-save" hidden></p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="por-que">
+  <div class="shell">
+    <div class="section-head reveal">
+      <h2>¿Por qué trabajar con iNGENIA?</h2>
+      <p>Seis razones concretas, sin letra chica.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why glass tilt-3d reveal"><span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span><h3>Somos de Santa Fe</h3><p>Entendemos el mercado local y estamos cerca cuando nos necesites.</p></div>
+      <div class="why glass tilt-3d reveal"><span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4 2.5-2.5Z"/></svg></span><h3>Sistema hecho a medida</h3><p>No usamos soluciones genéricas, todo se configura según tu negocio.</p></div>
+      <div class="why glass tilt-3d reveal"><span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg></span><h3>Todo centralizado</h3><p>Productos, ventas, pedidos y clientes gestionados desde un mismo ecosistema.</p></div>
+      <div class="why glass tilt-3d reveal"><span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z"/></svg></span><h3>Implementación rápida</h3><p>En pocos días tu sistema puede estar funcionando.</p></div>
+      <div class="why glass tilt-3d reveal"><span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/></svg></span><h3>Acompañamiento continuo</h3><p>No desaparecemos después de la entrega: estamos disponibles para ajustes y mejoras.</p></div>
+      <div class="why glass tilt-3d reveal"><span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span><h3>Sin contratos largos</h3><p>Modalidad mensual, sin permanencia mínima.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <div class="closing reveal">
+      <h2>¿Avanzamos?</h2>
+      <p>Escribinos y coordinamos el próximo paso. En pocos días podés estar funcionando.</p>
+      <div class="cta-links">
+        <a class="btn btn-lg" data-wa="fede" href="https://wa.me/5493425969853">WhatsApp con Fede</a>
+        <a class="btn btn-lg btn-ig" data-wa="flor" href="https://wa.me/5493424497718">WhatsApp con Flor</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="shell footer-row">
+    <div>
+      <div class="footer-brand"><img src="logo-header.png" alt=""><span class="wordmark"><span class="wm-light">iNGEN</span><span class="wm-bold">IA</span></span></div>
+      <p class="footer-tagline">Santa Fe, Argentina · Fede: 342-5969853 · Flor: 342-4497718</p>
+    </div>
+    <div class="footer-links">
+      <a class="ig-link" href="https://www.instagram.com/ingenia.sf" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js" defer></script>
+<script>
+(function(){
+  /* Este archivo no cambia nunca: los servicios, precios, links y clave se leen
+     de la configuración que publica iNGENIA. Si la demo está oculta, los links
+     y la clave ni siquiera llegan a esta página. */
+  var ENDPOINT = 'https://script.google.com/macros/s/AKfycbwDVP0rIlyzmd8LmrDXeFLXrOLtSvqQbqqSwm7gOoIBqhIhlChOGV5ZlHGlG-RP2BoC/exec';
+  var FOLDER   = '1tLrDTWIycHePoemlJ4w1LpLHp6GFXD6_';
+  var SNAP     = {"v":1,"cliente":"Pastora","servicios":[{"id":"rweb","nombre":"Web Premium para tu Restó","resumen":"La cara de tu restó en internet. Una página web con la identidad de tu local, pensada para que tus clientes vean la carta, reserven su mesa y te escriban en un toque, desde cualquier dispositivo.","subtitulo":"Incluye","estilo":"lista","items":["Diseño personalizado con el estilo y la identidad de tu restó","Carta online con fotos y precios, siempre actualizada","Reservas online: día, hora, cantidad de personas y adentro o afuera","Botón directo a tu WhatsApp","Lista para compartir en Instagram y reemplazar el Linktree","Diseño adaptable a celular, tablet y computadora","Conectada con el sistema de gestión"],"cierre":""},{"id":"rsis","nombre":"Sistema de Gestión para Restó","resumen":"Todo tu salón, ordenado en un solo lugar. Un sistema a medida para atender las mesas, recibir pedidos, coordinar a tu equipo y cobrar, desde el celular, la tablet o la computadora del local.","subtitulo":"Qué incluye","estilo":"lista","items":["QR en cada mesa: tus clientes ven la carta y hacen su pedido desde el celular","Llamar al mozo y pedir la cuenta desde la mesa, sin levantar la mano","Pedidos que llegan al mozo con aviso en vivo, para confirmar antes de pasar a cocina","Pantalla de Cocina y Barra con aviso al mozo cuando el plato está listo","Plano de mesas con estados en tiempo real","Reservas con disponibilidad real, conectadas con la web","Cuenta por mesa y cobro en efectivo, transferencia, tarjeta o mixto, con propina","Ventas y reportes del salón"],"cierre":"Con el QR en cada mesa, tus clientes piden sin esperar y tu equipo atiende mejor.","etiqueta":"Incluye QR en mesa"}],"planes":[{"id":"resto","nombre":"Restó iNGENIA","impl":0,"mes":50000,"incl":"Web Premium y Sistema de Gestión para tu restó (con QR en mesa, reservas, cocina y cobro), todo en una sola suscripción mensual y sin costo de implementación."}],"titulo":"Todo lo que necesita tu restó.","subt":"La web que ve tu cliente y el sistema que usa tu equipo, conectados entre sí.","invSub":"Un solo plan, con todo incluido y sin costo de implementación."}; /* copia para mostrar al instante; la demo nunca va acá */
+  var NUMS = { fede: '5493425969853', flor: '5493424497718' };
+  var cliente = document.getElementById('cliente').textContent;
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fmt = function(n){ return '$' + Math.round(n).toLocaleString('es-AR'); };
+  var $ = function(id){ return document.getElementById(id); };
+  var NUMEROS = ['', 'Una solución.', 'Dos soluciones. Un mismo ecosistema.', 'Tres soluciones. Un mismo ecosistema.', 'Cuatro soluciones. Un mismo ecosistema.', 'Cinco soluciones. Un mismo ecosistema.'];
+  var CHECK = '<span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>';
+
+  try {
+    var f = new Date().toLocaleDateString('es-AR', { day: 'numeric', month: 'long', year: 'numeric' });
+    $('fecha').textContent = 'Santa Fe · ' + f;
+  } catch(e) {}
+
+  function h(tag, cls, text){
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;   /* textContent: nunca interpreta HTML */
+    return n;
+  }
+  function esUrl(u){ return typeof u === 'string' && /^https?:\/\//i.test(u); }
+
+  var PLANES = {}, orden = [], current = null, shown = { impl: 0, mes: 0 };
+
+  function tween(node, key, to){
+    var from = shown[key];
+    if (to === 0) { node.textContent = 'Sin costo'; shown[key] = 0; return; }
+    if (reduce || from === to) { node.textContent = fmt(to); shown[key] = to; return; }
+    var t0 = performance.now(), dur = 450;
+    (function step(now){
+      var p = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+      node.textContent = fmt(from + (to - from) * e);
+      if (p < 1) requestAnimationFrame(step); else shown[key] = to;
+    })(t0);
+  }
+
+  function updateWa(){
+    var p = PLANES[current];
+    var msg = 'Hola! Vi el presupuesto de iNGENIA para ' + cliente +
+              ' y me interesa la opción "' + p.nombre + '" (' + (p.impl ? fmt(p.impl) + ' de implementación + ' + fmt(p.mes) + ' por mes' : fmt(p.mes) + ' por mes, sin costo de implementación') + '). Quiero avanzar.';
+    document.querySelectorAll('[data-wa]').forEach(function(a){
+      a.href = 'https://wa.me/' + NUMS[a.getAttribute('data-wa')] + '?text=' + encodeURIComponent(msg);
+    });
+  }
+
+  function select(id){
+    current = id;
+    var p = PLANES[id];
+    document.querySelectorAll('.plan').forEach(function(b){
+      b.setAttribute('aria-pressed', b.getAttribute('data-plan') === id ? 'true' : 'false');
+    });
+    $('t-name').textContent = p.nombre;
+    tween($('t-impl'), 'impl', p.impl);
+    tween($('t-mes'), 'mes', p.mes);
+    var incl = $('t-incl'); incl.textContent = '';
+    incl.appendChild(h('b', null, 'Incluye:')); incl.appendChild(document.createTextNode(' ' + p.incl));
+    var s = $('t-save');
+    if (p.eco && p.ahorroImpl > 0) {
+      s.textContent = '';
+      s.appendChild(h('b', null, 'Ahorrás ' + fmt(p.ahorroImpl)));
+      s.appendChild(document.createTextNode(' en la implementación y '));
+      s.appendChild(h('b', null, fmt(p.ahorroMes) + ' por mes'));
+      s.appendChild(document.createTextNode(' frente a contratar las soluciones por separado.'));
+      s.hidden = false;
+    } else { s.hidden = true; }
+    updateWa();
+  }
+
+  function copiar(code, btn, msg){
+    var txt = code.textContent.trim();
+    var ok = function(){
+      btn.classList.add('is-done'); msg.textContent = 'Contraseña copiada.';
+      setTimeout(function(){ btn.classList.remove('is-done'); msg.textContent = ''; }, 2200);
+    };
+    var fb = function(){
+      var r = document.createRange(); r.selectNodeContents(code);
+      var sel = getSelection(); sel.removeAllRanges(); sel.addRange(r);
+      try { document.execCommand('copy'); ok(); } catch(e) { msg.textContent = 'Mantené apretada la contraseña para copiarla.'; }
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(ok, fb); else fb();
+  }
+
+  function tarjeta(s, i){
+    var a = h('article', 'sol glass tilt-3d reveal');
+    a.appendChild(h('span', 'sol-num', ('0' + (i + 1)).slice(-2)));
+    if (s.etiqueta) a.appendChild(h('span', 'chip-et', s.etiqueta));
+    a.appendChild(h('h3', null, s.nombre));
+    a.appendChild(h('p', null, s.resumen));
+    if (s.items && s.items.length) {
+      a.appendChild(h('p', 'sub', s.subtitulo || 'Incluye'));
+      if (s.estilo === 'chips') {
+        var ul = h('ul', 'chips');
+        s.items.forEach(function(t){ ul.appendChild(h('li', null, t)); });
+        a.appendChild(ul);
+      } else {
+        var ul2 = h('ul', 'feature-list');
+        s.items.forEach(function(t){
+          var li = document.createElement('li');
+          li.innerHTML = CHECK;                       /* HTML fijo, sin datos */
+          li.appendChild(document.createTextNode(t));
+          ul2.appendChild(li);
+        });
+        a.appendChild(ul2);
+      }
+    }
+    if (s.cierre) { var c = h('p', null, s.cierre); c.style.marginTop = '1.2rem'; a.appendChild(c); }
+    var d = s.demo;
+    if (d && esUrl(d.url)) {
+      var box = h('div', 'sol-actions');
+      if (d.clave) {
+        box.appendChild(h('p', 'pass-label', 'Contraseña para ingresar'));
+        var pass = h('div', 'pass');
+        var code = h('code', null, d.clave);
+        var btn = h('button', 'copy-btn'); btn.type = 'button'; btn.setAttribute('aria-label', 'Copiar contraseña');
+        btn.innerHTML = '<svg class="i-copy" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="i-ok" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>';
+        var msg = h('p', 'pass-msg'); msg.setAttribute('role', 'status');
+        btn.addEventListener('click', function(){ copiar(code, btn, msg); });
+        pass.appendChild(code); pass.appendChild(btn);
+        box.appendChild(pass); box.appendChild(msg);
+      }
+      var link = h('a', 'btn', d.etiqueta || 'Ver la demo');
+      link.href = d.url; link.target = '_blank'; link.rel = 'noopener noreferrer';
+      box.appendChild(link);
+      a.appendChild(box);
+    }
+    return a;
+  }
+
+  function plan(p, id){
+    var b = h('button', 'plan glass tilt-3d reveal' + (p.eco ? ' eco' : ''));
+    b.type = 'button'; b.setAttribute('data-plan', id); b.setAttribute('aria-pressed', 'false');
+    var top = h('span', 'plan-top');
+    var r = h('span', 'radio'); r.setAttribute('aria-hidden', 'true'); top.appendChild(r);
+    if (p.eco) top.appendChild(h('span', 'badge', 'Recomendado'));
+    b.appendChild(top);
+    b.appendChild(h('h3', null, p.nombre));
+    [['Implementación', p.impl], ['Mensual', p.mes]].forEach(function(x){
+      var row = h('span', 'row'); row.appendChild(h('span', null, x[0])); row.appendChild(h('strong', null, x[1] === 0 ? 'Sin costo' : fmt(x[1]))); b.appendChild(row);
+    });
+    b.addEventListener('click', function(){ select(id); });
+    return b;
+  }
+
+  function pintar(cfg){
+    var sv = (cfg.servicios || []).filter(function(s){ return s && s.nombre; });
+    if (!sv.length) throw new Error('sin servicios');
+    var grid = $('sol-grid'); grid.textContent = '';
+    sv.forEach(function(s, i){ grid.appendChild(tarjeta(s, i)); });
+    if (sv.length === 1) grid.className = 'sol-grid uno';
+    grid.hidden = false; $('estado').hidden = true;
+    $('sol-titulo').textContent = cfg.titulo || NUMEROS[sv.length] || (sv.length + ' soluciones. Un mismo ecosistema.');
+    if (cfg.subt) $('sol-sub').textContent = cfg.subt;
+    else if (sv.length === 1) $('sol-sub').textContent = 'Pensada a medida para tu negocio.';
+
+    PLANES = {}; orden = [];
+    var pg = $('plan-grid'); pg.textContent = '';
+    if (cfg.planes && cfg.planes.length) {
+      /* plan cerrado (ej. Restó): las tarjetas son solo descriptivas y el precio es el del plan */
+      cfg.planes.forEach(function(p){
+        PLANES[p.id] = { nombre: p.nombre, impl: p.impl, mes: p.mes, incl: p.incl || '' };
+        orden.push(p.id);
+      });
+    } else sv.forEach(function(s){
+      PLANES[s.id] = { nombre: s.nombre, impl: s.impl, mes: s.mes, incl: s.incl || s.resumen };
+      orden.push(s.id);
+    });
+    var eco = cfg.planes ? null : cfg.ecosistema;
+    if (eco && sv.length > 1) {
+      PLANES.eco = { eco: true, nombre: eco.nombre || 'Ecosistema iNGENIA', impl: eco.impl, mes: eco.mes,
+        incl: eco.incl || (sv.map(function(s){ return s.nombre; }).join(', ') + ', conectados entre sí.'),
+        ahorroImpl: eco.ahorroImpl, ahorroMes: eco.ahorroMes };
+      orden.push('eco');
+    }
+    orden.forEach(function(id){ pg.appendChild(plan(PLANES[id], id)); });
+    pg.style.setProperty('--cols', Math.min(orden.length, 3));
+    pg.classList.toggle('uno', orden.length === 1);
+    $('inv-sub').textContent = cfg.invSub ? cfg.invSub : PLANES.eco
+      ? 'Tocá una opción para ver cuánto sería. La más completa es el Ecosistema, con todo junto.'
+      : 'Tocá una opción para ver cuánto sería.';
+    $('inversion').hidden = false;
+    shown = { impl: PLANES[orden[orden.length - 1]].impl, mes: PLANES[orden[orden.length - 1]].mes };
+    select(orden[orden.length - 1]);
+  }
+
+  function falla(){
+    var e = $('estado');
+    e.textContent = 'No pudimos cargar el presupuesto en este momento. Escribinos y te lo mandamos.';
+    var a = h('a', 'btn', 'WhatsApp con Fede'); a.href = 'https://wa.me/' + NUMS.fede; a.style.display = 'table'; a.style.margin = '1rem auto 0';
+    e.appendChild(a);
+  }
+
+  /* Mostrar al instante lo último que se vio (o la copia del archivo) y
+     actualizar apenas llega el dato fresco. Lo guardado nunca incluye la demo. */
+  var KEY = 'ingenia-cfg-' + FOLDER, pintado = null;
+  function sinDemo(c){
+    var k = JSON.parse(JSON.stringify(c));
+    (k.servicios || []).forEach(function(s){ delete s.demo; });
+    return k;
+  }
+  function mostrar(cfg){
+    var txt = JSON.stringify(cfg);
+    if (txt === pintado) return;
+    if (cfg && cfg.cliente) { cliente = String(cfg.cliente).slice(0, 80); $('cliente').textContent = cliente; document.title = 'Presupuesto de iNGENIA para ' + cliente; }
+    pintar(cfg);
+    pintado = txt;
+  }
+  var inicial = null;
+  try { var g = localStorage.getItem(KEY); if (g) inicial = JSON.parse(g); } catch (e) {}
+  if (!inicial) inicial = SNAP;
+  if (inicial && inicial.servicios) { try { mostrar(sinDemo(inicial)); } catch (e) { pintado = null; } }
+
+  var url = ENDPOINT + (ENDPOINT.indexOf('?') < 0 ? '?' : '&') + 'id=' + encodeURIComponent(FOLDER);
+  (window.__cfgP || fetch(url, { cache: 'no-store' }).then(function(r){ if (!r.ok) throw new Error('http'); return r.json(); }))
+    .then(function(cfg){
+      if (!cfg || cfg.error || !cfg.servicios) throw new Error('cfg');
+      mostrar(cfg);
+      try { localStorage.setItem(KEY, JSON.stringify(sinDemo(cfg))); } catch (e) {}
+    })
+    .catch(function(){ if (pintado === null) falla(); });
+})();
+</script>
+</body>
+</html>
